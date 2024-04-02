@@ -8,7 +8,15 @@ Here's an R plot chunk. It's wrapped in `.quarto-figure`, which means that its e
 hist(c(3, 4, 5, 5, 6, 8, 3, 1, 2, 5, 8, 9, 4, 1))
 ```
 
-Now here's a GraphViz chunk. It doesn't have a `.quarto-figure` wrapper, and it has `max-width: none` set inline:
+Let's add some SCSS styling to target (hopefully _just_) GraphViz figures:
+
+```{scss}
+.cell-output-display > div:not(.quarto-figure) figure svg {
+  max-width: 100% !important;
+}
+```
+
+Now here's a GraphViz chunk. It doesn't have a `.quarto-figure` wrapper, and it has `max-width: none` set inline, but thanks to the chunk above, we overrule its `max-width`:
 
 ```{dot}
 graph G {
