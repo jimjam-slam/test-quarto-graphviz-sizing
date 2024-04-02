@@ -1,0 +1,19 @@
+---
+title: "GraphViz sizing test"
+---
+
+Here's an R plot chunk. It's wrapped in `.quarto-figure`, which means that its enclosing figure gets `width: 100%`:
+
+```{r}
+hist(c(3, 4, 5, 5, 6, 8, 3, 1, 2, 5, 8, 9, 4, 1))
+```
+
+Now here's a GraphViz chunk. It doesn't have a `.quarto-figure` wrapper, and it has `max-width: none` set inline:
+
+```{dot}
+graph G {
+  layout=neato
+  run -- intr;
+  intr -- runbl;
+}
+```

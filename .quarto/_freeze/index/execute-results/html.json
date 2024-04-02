@@ -1,0 +1,17 @@
+{
+  "hash": "f5603bb4778b638c6589715dec6e1ec1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"GraphViz sizing test\"\n---\n\n\n\nHere's an R plot chunk. It's wrapped in `.quarto-figure`, which means that its enclosing figure gets `width: 100%`:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nhist(c(3, 4, 5, 5, 6, 8, 3, 1, 2, 5, 8, 9, 4, 1))\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\nNow here's a GraphViz chunk. It doesn't have a `.quarto-figure` wrapper, and it has `max-width: none` set inline:\n\n\n\n```{dot}\ngraph G {\n  layout=neato\n  run -- intr;\n  intr -- runbl;\n}\n```\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
